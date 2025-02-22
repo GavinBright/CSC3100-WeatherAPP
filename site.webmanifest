@@ -21,5 +21,5 @@
     "theme_color": "#593196",
     "background_color": "#17141f",
     "display": "standalone",
-    "start_url": "/index.html"
+    "start_url": "/CSC3100-WeatherAPP/"
 }
