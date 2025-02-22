@@ -63,12 +63,9 @@
         }
         async function getIPLocation() {
     try {
-        const response = await fetch('https://ip-api.com/json'); //Call to this API ChatGPT recommended it.
+        const response = await fetch('https://ipinfo.io/json?token=22c903e0ca74cf');
         const data = await response.json();
-        if (data.status === "fail") {
-        throw new Error("Unable to get IP-based location");
-        }
-        return { latitude: data.lat, longitude: data.lon };
+        return { latitude: data.loc.split(',')[0], longitude: data.loc.split(',')[1] };
     } catch (error) {
         throw new Error("Error fetching IP-based location: " + error.message);
     }
